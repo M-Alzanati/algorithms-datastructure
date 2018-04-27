@@ -1,0 +1,14 @@
+{
+  "author": {
+    "name": "Mohamed Hosny Ahmed",
+    "email": "mohamed.h.alzanaty@gmail.com",
+    "url": "https://www.linkedin.com/in/biohosny/"
+  },
+  "license": "Mit",
+  "name": "algo_ds",
+  "description": "I will create my algorithms and datastructures library in javascript",
+  "version": "0.0.1",
+  "devDependencies": {
+    "jest": "^22.4.3"
+  }
+}

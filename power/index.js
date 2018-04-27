@@ -1,7 +1,7 @@
 /**
  * @author: Mohamed Hosny Ahmed
- * @description: Given a word check to see if it's palindrom or not, Using recursion and loops
- * @example: ["Rise to vote sir", aibohphobia] are palindroms
+ * @description: Use the iterative and recursive to calculate the y power of x.
+ * @example: power(2, 3) = 8
  */
 
 function recursive(x, y) {

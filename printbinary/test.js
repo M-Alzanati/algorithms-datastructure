@@ -20,64 +20,64 @@ test('iterative and recursive are functions', () => {
 
 describe('iterative implementation', () => {
     test('binary of 0 is 0', () => {
-        print_binary.iterative(0);
+        print_binary.iterative(0, console.log);
         expect(console.log.mock.calls[0][0]).toEqual('0');
     });
 
     test('binary of -1 is 11', () => {
-        print_binary.iterative(-1);
+        print_binary.iterative(-1, console.log);
         expect(console.log.mock.calls[0][0]).toEqual('11');
     });
 
     test('binary of 10 is 1010', () => {
-        print_binary.iterative(10);
+        print_binary.iterative(10, console.log);
         expect(console.log.mock.calls[0][0]).toEqual('1010');
     });
 
-    test('binary of 54 is 10110100', () => {
-        print_binary.iterative(180);
+    test('binary of 180 is 10110100', () => {
+        print_binary.iterative(180, console.log);
         expect(console.log.mock.calls[0][0]).toEqual('10110100');
     });
 
     test('binary of -455 is 1111000111', () => {
-        print_binary.iterative(-455);
+        print_binary.iterative(-455, console.log);
         expect(console.log.mock.calls[0][0]).toEqual('1111000111');
     });
 
     test('binary of 455 is 111000111', () => {
-        print_binary.iterative(455);
+        print_binary.iterative(455, console.log);
         expect(console.log.mock.calls[0][0]).toEqual('111000111');
     });
 });
 
 describe('recursive implementation', () => {
     test('binary of 0 is 0', () => {
-        print_binary.recursive(0);
+        print_binary.recursive(0, console.log);
         expect(console.log.mock.calls[0][0]).toEqual('0');
     });
 
     test('binary of -1 is 11', () => {
-        print_binary.recursive(-1);
+        print_binary.recursive(-1, console.log);
         expect(console.log.mock.calls[0][0]).toEqual('11');
     });
 
     test('binary of 10 is 1010', () => {
-        print_binary.recursive(10);
+        print_binary.recursive(10, console.log);
         expect(console.log.mock.calls[0][0]).toEqual('1010');
     });
 
-    test('binary of 54 is 10110100', () => {
-        print_binary.recursive(180);
+    test('binary of 180 is 10110100', () => {
+        print_binary.recursive(180, console.log);
         expect(console.log.mock.calls[0][0]).toEqual('10110100');
     });
 
     test('binary of -455 is 1111000111', () => {
-        print_binary.recursive(-455);
+        print_binary.recursive(-455, console.log);
         expect(console.log.mock.calls[0][0]).toEqual('1111000111');
     });
 
     test('binary of 455 is 111000111', () => {
-        print_binary.recursive(455);
+        print_binary.recursive(455, console.log);
         expect(console.log.mock.calls[0][0]).toEqual('111000111');
     });
 });

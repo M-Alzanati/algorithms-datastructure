@@ -4,9 +4,9 @@
  * @example: (10) = 1010
  */
 
-function recursive(n, result = '') {
+function recursive(n, fn, result = '') {
     if(n === 0) {
-        console.log('0');
+        fn('0');
         return;
     }
 
@@ -14,18 +14,18 @@ function recursive(n, result = '') {
         if (Math.sign(n) < 0) {
             result = '1' + result;
         }
-        console.log(result);
+        fn(result);
         return;
     } else {
         const mod = parseInt((Math.sign(n) * n) % 2);
         result = mod + result;
-        recursive(n / 2, result);
+        recursive(n / 2, fn, result);
     }
 }
 
-function iterative(n) {
+function iterative(n, fn) {
     if(n === 0) {
-        console.log('0');
+        fn('0');
         return;
     }
 
@@ -42,7 +42,7 @@ function iterative(n) {
         result = '1' + result;
     }
 
-    console.log(result);
+    fn(result);
 }
 
 module.exports = {

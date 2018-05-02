@@ -5,18 +5,18 @@
  *               print all possible combinations of values that could appear on the dice
  */
 
-function roll(dices, chosen = []) {
+function diceroll(dices, chosen = []) {
     if (dices === 0) {
         console.log(chosen.toString());
     } else {
         for (let i = 1; i <= 6; i++) {
             chosen.push(i);
 
-            roll(dices - 1, chosen);
+            diceroll(dices - 1, chosen);
 
             chosen.pop();
         }
     }
 }
 
-module.exports = roll;
+module.exports = diceroll;

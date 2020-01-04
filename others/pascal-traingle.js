@@ -41,5 +41,3 @@ var initArr = function (arr) {
     result.push(0);
     return result;
 };
-
-console.log(generate(5));

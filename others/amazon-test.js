@@ -31,7 +31,7 @@ function orderedJunctionBoxes(numberOfBoxes, boxList)
             tmp2 = str2.substring(0, str2.indexOf(' '));
             return tmp1 > tmp2;
         }
-    })
+    });
     
     return result.concat(oldVersion).concat(newVersion);
 }

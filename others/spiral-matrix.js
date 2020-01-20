@@ -10,7 +10,6 @@ var spiralOrder = function(matrix) {
     let up = 0, down = matrix.length - 1, right = matrix[0].length - 1,  left = 0;
 
     while(result.length !== length) {
-        console.log(result);
         for (let i = left; i <= right; i++) {
             if (result.length === length) { return result; }
             result.push(matrix[up][i]);

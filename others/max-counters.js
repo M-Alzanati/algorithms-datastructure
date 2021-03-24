@@ -5,6 +5,8 @@ function solution(N, A) {
     // write your code in JavaScript (Node.js 8.9.4)
     let arr = new Array(N).fill(0);
     let max = 0;
+    let lastMax = 0;
+    
     for(let i = 0; i < A.length; i++) {
         if (A[i] >= 1 && A[i] <= N) {
             arr[A[i] - 1] += 1;

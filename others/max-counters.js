@@ -2,22 +2,29 @@
 // console.log('this is a debug message');
 
 function solution(N, A) {
-    // write your code in JavaScript (Node.js 8.9.4)
-    let arr = new Array(N).fill(0);
-    let max = 0;
-    let lastMax = 0;
-    
+    const arr = new Array(N).fill(0);
+    let max = lastMax = 0;
+    const counter = N + 1;
+
     for(let i = 0; i < A.length; i++) {
-        if (A[i] >= 1 && A[i] <= N) {
-            arr[A[i] - 1] += 1;
-            if (arr[A[i] - 1] > max) {
-                max = arr[A[i] - 1];
-            }
+        const k = A[i] - 1;
+        if (A[i] == counter) {
+            lastMax = max;
         } else {
-            arr = arr.map(r => max);
+            if (arr[k] < lastMax) arr[k] = lastMax;
+            arr[k] += 1;
+            if (arr[k] > max) max = arr[k];
         }
     }
+    
+    for (let i = 0; i < N; i++) {
+        if (arr[i] < lastMax) {
+            arr[i] = lastMax;
+        }
+    }
+
     return arr;
 }
+
 
 console.log(solution(5, [3, 4, 4, 6, 1, 4, 4]))

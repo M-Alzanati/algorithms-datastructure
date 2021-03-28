@@ -1,4 +1,4 @@
-pfunction solution(A, B, K) {
+function solution(A, B, K) {
     // write your code in JavaScript (Node.js 8.9.4)
     let count = 0;
 
